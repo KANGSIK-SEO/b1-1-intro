@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="프로필 일러스트">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#667eea"/><stop offset="1" stop-color="#764ba2"/></linearGradient></defs>
+  <rect width="200" height="200" fill="url(#g)"/>
+  <circle cx="100" cy="80" r="36" fill="#fff" opacity=".95"/>
+  <path d="M30 200c0-44 31-68 70-68s70 24 70 68z" fill="#fff" opacity=".95"/>
+  <text x="100" y="92" text-anchor="middle" font-size="30" font-family="sans-serif" font-weight="700" fill="#5b5bd6">KS</text>
+</svg>

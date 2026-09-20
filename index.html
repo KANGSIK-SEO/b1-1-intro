@@ -3,21 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>서강식 | 자기소개</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="서강식의 포트폴리오 웹사이트">
+  <title>서강식 | 포트폴리오</title>
+  <link rel="icon" href="images/profile.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <main class="card">
-    <h1>안녕하세요, 서강식입니다 👋</h1>
-    <p class="sub">AI와 양자컴퓨팅, 미술 진위검증에 관심이 많은 개발 학습자</p>
-    <ul>
-      <li>📍 코디세이 AI 올인원 과정 수강 중</li>
-      <li>🎨 미술품 위작 검증 AI 개발</li>
-      <li>⚛️ IBM Quantum 실험</li>
-    </ul>
-    <button id="btn">인사하기</button>
-    <p id="msg"></p>
+  <header class="site-header" id="header">
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#hero" class="logo">KS.</a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="다크 모드 전환">🌙</button>
+        <button type="button" id="hamburger" class="icon-btn hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero fade-in">
+      <p class="hero-hello">Hello! 👋</p>
+      <h1>저는 <span class="accent">서강식</span>입니다.</h1>
+      <p class="hero-typing"><span id="typing"></span><span class="cursor" aria-hidden="true">|</span></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
+      </div>
+    </section>
+
+    <section id="about" class="section fade-in">
+      <h2>About Me</h2>
+      <div class="about">
+        <img src="images/profile.svg" alt="서강식의 프로필 일러스트" class="profile" width="200" height="200">
+        <article>
+          <p>안녕하세요! AI와 웹 개발을 배우고 있는 서강식입니다. 미술품 위작 검증 AI와 양자컴퓨팅 실험처럼, 서로 다른 분야를 연결하는 일에 흥미가 많습니다.</p>
+          <p>이 사이트는 라이브러리 없이 순수 HTML, CSS, JavaScript로 만들었고, "이벤트 → 상태 변경 → 화면 업데이트" 흐름을 직접 구현하는 데 집중했습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section fade-in">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Git / GitHub</li>
+        <li>FastAPI</li>
+        <li>Qiskit</li>
+        <li>PyTorch</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section fade-in">
+      <h2>Projects</h2>
+      <p class="section-sub">GitHub API로 불러온 저장소 목록입니다.</p>
+      <div class="filters" id="filters" aria-label="언어 필터"></div>
+      <div id="projects-status" class="status" role="status" aria-live="polite"></div>
+      <div id="projects-grid" class="grid"></div>
+    </section>
+
+    <section id="contact" class="section fade-in">
+      <h2>Contact</h2>
+      <form id="contact-form" class="form" novalidate>
+        <div class="field">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+          <p class="error" id="name-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+          <p class="error" id="email-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="message">메시지</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+          <p class="error" id="message-error" role="alert"></p>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p class="success" id="form-success" role="status"></p>
+      </form>
+    </section>
   </main>
-  <script src="script.js"></script>
+
+  <footer class="site-footer">
+    <p>© 2026 서강식</p>
+    <ul class="social">
+      <li><a href="https://github.com/KANGSIK-SEO" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="mailto:kangsikseoul@icloud.com">Email</a></li>
+    </ul>
+  </footer>
+
+  <button type="button" id="scroll-top" class="scroll-top" aria-label="맨 위로 이동">↑</button>
 </body>
 </html>
